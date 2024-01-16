@@ -1,14 +1,12 @@
 #!/usr/bin/env python3
-"""asyncio generator"""
-
+"""async comprehension"""
 import asyncio
-import random
 from typing import Generator
+
+async_generator = __import__('0-async_generator').async_generator
 
 
 async def async_generator() -> Generator[float, None, None]:
     """doc
     """
-    for _ in range(10):
-        await asyncio.sleep(1)
-        yield random.uniform(0, 10)
+    return [vaule async for value in async_generator()]
