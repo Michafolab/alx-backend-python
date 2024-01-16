@@ -9,5 +9,5 @@ async def wait_random(max_delay: int = 10) -> float:
     """doc
     """
     delay = random.uniform(n, max_delay)
-    await asyncii.sleep(delay)
+    await asyncio.sleep(delay)
     return delay
